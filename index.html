@@ -1,75 +1,143 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Profil Saya</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Profil Saya</title>
+  <style>
+    header {
+      background-color: #3b82f6;
+      color: white;
+      text-align: center;
+      padding: 15px 0;
+    }
+
+    nav ul {
+      list-style: none;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin: 10px 0 0;
+    }
+
+    nav ul li a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    nav ul li a:hover {
+      text-decoration: underline;
+    }
+
+    audio, video {
+      width: 100%;
+      max-width: 600px;
+      display: block;
+      margin-top: 10px;
+    }
+
+    footer {
+      background-color: #222;
+      color: white;
+      padding: 20px;
+      text-align: center;
+    }
+
+    form {
+      max-width: 400px;
+      margin: 0 auto 20px;
+      text-align: left;
+    }
+
+    input, textarea {
+      width: 100%;
+      margin-bottom: 10px;
+      padding: 8px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+
+    button {
+      background-color: #3b82f6;
+      color: white;
+      border: none;
+      padding: 8px 16px;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #2563eb;
+    }
+  </style>
 </head>
 <body>
-    <header>
-        <h1>Profil Saya</h1>
-        <nav>
-            <ul>
-                <li><a href="#about">Tentang Saya</a></li>
-                <li><a href="#hobby">Hobi Saya</a></li>
-                <li><a href="#projects">Proyek</a></li>               
-                <li><a href="#contact">Hubungi saya</a></li>
-            </ul>
-        </nav>
-    </header>
+  <header>
+    <h1>Profil Saya</h1>
+    <nav>
+      <ul>
+        <li><a href="#about">Tentang Saya</a></li>
+        <li><a href="#hobby">Hobi Saya</a></li>
+        <li><a href="#projects">Proyek</a></li>               
+        <li><a href="#contact">Hubungi saya</a></li>
+      </ul>
+    </nav>
+  </header>
+  
+  <main>
+    <section id="about">
+      <h2>Tentang Saya</h2>
+      <article>
+        <img src="PRofil PW.jpg" alt="Tentang Saya" width="150" height="150">
+        <p>Halo! Saya Aszra Aurelita Amanah Firdausy Tjahjaningrat, 
+            seorang mahasiswa Sistem Informasi UISI 
+            yang pada saat ini sedang menjalani pendidikan semester 4.</p>
+      </article>
+    </section>
     
-    <main>
-        <section id="about">
-            <h2>Tentang Saya</h2>
-            <article>
-                <img src="PRofil PW.jpg" alt="Tentang Saya" width="150" height="150">
-                <p>Halo! Saya Aszra Aurelita Amanah Firdausy Tjahjaningrat, 
-                    seorang mahasiswa Sistem Informasi UISI 
-                    yang pada saat ini sedang menjalani pendidikan semester 4.</p>
-            </article>
-        </section>
-        
-        <section id="hobby">
-    <h2>Hobi Saya</h2>
-    <ul>
+    <section id="hobby">
+      <h2>Hobi Saya</h2>
+      <ul>
         <li>Membaca buku</li>
         <li>Menonton film</li>
         <li>Mendengarkan musik</li>
-    </ul>
-    <audio controls>
+      </ul>
+      <audio controls>
         <source src="Indonesia Raya.mp3" type="audio/mp3">
-    </audio>
-</section>
+      </audio>
+    </section>
 
-        <section id="projects">
-            <h2>Projek Saya</h2>
-            <article>
-                <h3>Proyek UAS Desain Pengalaman Pengguna</h3>
-                <p>Proyek ini dibuat menggunakan figma sebagai tugas UAS mata kuliah Desain Pengalaman Pengguna.</p>
-                <img src="Screenshot (1381).png" alt="Proyek saya" width="640" height="360">
-                <br>
-                <p>Berikut video presentasi proyek saya.</p>
-                <video width="640" height="360" controls>
-                <source src="Presentasi.mp4" type="video/mp4"></video>
-            </article>
-        </section>
+    <section id="projects">
+      <h2>Projek Saya</h2>
+      <article>
+        <h3>Proyek UAS Desain Pengalaman Pengguna</h3>
+        <p>Proyek ini dibuat menggunakan figma sebagai tugas UAS mata kuliah Desain Pengalaman Pengguna.</p>
+        <img src="Screenshot (1381).png" alt="Proyek saya" width="640" height="360">
+        <br>
+        <p>Berikut video presentasi proyek saya.</p>
+        <video width="640" height="360" controls>
+          <source src="Presentasi.mp4" type="video/mp4">
+        </video>
+      </article>
+    </section>
+  </main>
+  
+  <footer>
+    <section id="contact">
+      <h2>Hubungi saya</h2>
+      <form>
+        <label>Nama: <input type="text" required></label>
+        <label>Email: <input type="email" required></label>
+        <label>Pesan: <textarea required></textarea></label>
+        <button type="submit">Kirim</button>
+      </form>
+    </section>
 
-        
-    </main>
-    
-    <footer>
-        <section id="contact">
-            <h2>Hubungi saya</h2>
-            <form>
-                <label>Nama: <input type="text" required></label>
-                <label>Email: <input type="email" required></label>
-                <label>Pesan: <textarea required></textarea></label>
-                <button type="submit">Kirim</button>
-            </form>
-        </section>
-
-            <p>Web ini dibuat oleh: Aszra Aurelita Amanah Firdausy Tjahjaningrat</p>
-            <p><a href="mailto:aszra.tjahjaningrat23@student.uisi.ac.id">aszra.tjahjaningrat23@student.uisi.ac.id</a></p>
-          </footer>
+    <p>Web ini dibuat oleh: Aszra Aurelita Amanah Firdausy Tjahjaningrat</p>
+    <p><a href="mailto:aszra.tjahjaningrat23@student.uisi.ac.id" style="color: #a7d3ff;">aszra.tjahjaningrat23@student.uisi.ac.id</a></p>
+  </footer>
 </body>
 </html>
