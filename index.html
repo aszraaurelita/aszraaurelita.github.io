@@ -27,10 +27,29 @@
             flex-wrap: wrap;
         }
 
-        img {
-            max-width: 100%;
-            height: auto;
-        }
+        /* Gambar responsif */
+    img {
+        max-width: 100%;
+        height: auto;
+    }
+
+/* Video responsif */
+    .video-container {
+        position: relative;
+        padding-bottom: 56.25%; /* 16:9 aspect ratio */
+        height: 0;
+        overflow: hidden;
+        max-width: 100%;
+    }
+
+    .video-container video {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+    }
+
 
         nav ul li {
             margin: 0 15px;
@@ -148,7 +167,7 @@
         <section id="about">
             <h2>Tentang Saya</h2>
             <article>
-                <img src="PRofil PW.jpg" alt="Tentang Saya" width="150" height="150">
+                <img src="PRofil PW.jpg" alt="Tentang Saya" style="max-width: 150px; width: 100%; height: auto;">
                 <p>Halo! Saya Aszra Aurelita Amanah Firdausy Tjahjaningrat</p>
                 <p>Seorang mahasiswa, program studi Sistem Informasi UISI</p>
                 <p>Saat ini saya sedang menjalani pendidikan semester 4</p>
@@ -177,11 +196,13 @@
                     resep sesuai bahan yang tersedia, menjadwalkan menu harian, memindai kalori dari makanan, 
                     dan bahkan bergabung menjadi kreator resep untuk berbagi inspirasi masakan. Aplikasi ini 
                     dirancang oleh Aszra Aurelita, Adinda Vany Astari, Citra Maulidya Haritsah, dan Julfa Irnanda Pratiwi.</p>
-                <img src="Screenshot (1381).png" alt="Proyek saya" width="640" height="360">
+                    <img src="Screenshot (1381).png" alt="Proyek saya">
                 <p>Desain ini dibuat menggunakan aplikasi berbasis web Figma sampai pada tahap prototyping. Aplikasi ini dirancang untuk memenuhi tugas ujian akhir mata kuliah Desain Pengalaman Pengguna. Hasil akhir projek ini kemudian dipresentasikan serta diunggah pada akun YouTube. Berikut proses pembuatan video presentasi kami.</p>
-                <video width="640" height="360" controls>
-                    <source src="Presentasi.mp4" type="video/mp4">
-                </video>
+                <div class="video-container">
+                    <video controls>
+                        <source src="Presentasi.mp4" type="video/mp4">
+                    </video>
+                </div>                
             </article>
         </section>
 
